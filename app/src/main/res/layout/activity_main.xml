@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--#1:Logo Layout-->
+    <LinearLayout
+        android:id="@+id/layoutImagen"
+        style="@style/innerLayoutHeight"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageDomino"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:contentDescription="@string/str_imagen"
+            android:scaleType="centerCrop"
+            android:src="@drawable/upperbanner" />
+
+    </LinearLayout>
+
+    <!--#2:Scores Layout -->
+    <LinearLayout
+        android:id="@+id/layoutScores"
+        style="@style/innerLayoutHeight"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <LinearLayout
+            android:id="@+id/layoutInfo"
+            style="@style/layoutScoreCol"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:id="@+id/textDescription"
+                style="@style/scoreLabelStyle"
+                android:text="@string/str_team" />
+
+            <TextView
+                android:id="@+id/textWins"
+                style="@style/scoreLabelStyle"
+                android:text="@string/str_win" />
+
+            <TextView
+                android:id="@+id/textScore"
+                style="@style/scoreLabelStyle"
+                android:text="@string/str_score" />
+
+
+            <!--layoutInfo ends-->
+        </LinearLayout>
+
+        <!--Separator-->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!--Home Team Layout -->
+        <LinearLayout
+            android:id="@+id/layoutHomeTeam"
+            style="@style/layoutScoreCol">
+
+            <TextView
+                android:id="@+id/textHome"
+                style="@style/teamsLabelStyle"
+                android:text="@string/str_home" />
+
+            <TextView
+                android:id="@+id/textHomeWins"
+                style="@style/teamsLabelStyle"
+                android:text="@string/str_zero" />
+
+            <TextView
+                android:id="@+id/textHomePoints"
+                style="@style/teamsLabelStyle"
+                android:text="@string/str_zero" />
+
+
+        </LinearLayout>
+
+        <!--Separator-->
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <!--Visitor Team Layout -->
+        <LinearLayout
+            android:id="@+id/layoutVisitorTeam"
+            style="@style/layoutScoreCol">
+
+            <TextView
+                android:id="@+id/textVisitor"
+                style="@style/teamsLabelStyle"
+                android:text="@string/str_visitor" />
+
+            <TextView
+                android:id="@+id/textVisitorWins"
+                style="@style/teamsLabelStyle"
+                android:text="@string/str_zero" />
+
+            <TextView
+                android:id="@+id/textVisitorPoints"
+                style="@style/teamsLabelStyle"
+                android:text="@string/str_zero" />
+
+        </LinearLayout>
+
+        <!--Layout Teams Ends-->
+    </LinearLayout>
+
+    <!--#3:subtotal TextView -->
+    <LinearLayout
+        android:id="@+id/layoutSubtotal"
+        style="@style/innerLayoutHeight"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <LinearLayout
+            android:id="@+id/layoutSubtotalVertCentered"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textSubtotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4CAF50"
+                android:gravity="end"
+                android:padding="8dp"
+                android:text="@string/str_zero"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--#4:Buttons for adding points -->
+    <LinearLayout
+        style="@style/innerLayoutHeight"
+        android:orientation="vertical">
+
+        <!--#4:Buttons from 0 to 4 -->
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/layoutButtons0To4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal"
+
+            >
+            <!--white - do nothing, just for cover the space-->
+
+            <ImageView
+                android:id="@+id/button0"
+                style="@style/faceBtnStyle"
+                android:contentDescription="@string/str_face"
+                android:src="@drawable/white_64x64"
+                android:tag="10" />
+
+            <ImageView
+                android:id="@+id/button1"
+                style="@style/faceBtnStyle"
+                android:contentDescription="@string/str_face"
+                android:src="@drawable/one_64x64"
+                android:tag="11" />
+
+            <ImageView
+                android:id="@+id/button2"
+                style="@style/faceBtnStyle"
+                android:contentDescription="@string/str_face"
+                android:src="@drawable/two_64x64"
+                android:tag="12" />
+
+            <ImageView
+                android:id="@+id/button3"
+                style="@style/faceBtnStyle"
+                android:contentDescription="@string/str_face"
+                android:src="@drawable/three_64x64"
+                android:tag="13" />
+
+            <ImageView
+                android:id="@+id/button4"
+                style="@style/faceBtnStyle"
+                android:contentDescription="@string/str_face"
+                android:src="@drawable/four_64x64"
+                android:tag="14" />
+
+        </LinearLayout>
+
+        <!--Buttoms from 5 to 9 -->
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/layoutButtons5To9"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/button5"
+                style="@style/faceBtnStyle"
+                android:contentDescription="@string/str_face"
+                android:src="@drawable/five_64x64"
+                android:tag="15" />
+
+            <ImageView
+                android:id="@+id/button6"
+                style="@style/faceBtnStyle"
+                android:contentDescription="@string/str_face"
+                android:src="@drawable/six_64x64"
+                android:tag="16" />
+
+            <ImageView
+                android:id="@+id/button7"
+                style="@style/faceBtnStyle"
+                android:contentDescription="@string/str_face"
+                android:src="@drawable/seven_64x64"
+                android:tag="17" />
+
+            <ImageView
+                android:id="@+id/button8"
+                style="@style/faceBtnStyle"
+                android:contentDescription="@string/str_face"
+                android:src="@drawable/eight_64x64"
+                android:tag="18" />
+
+            <ImageView
+                android:id="@+id/button9"
+                style="@style/faceBtnStyle"
+                android:contentDescription="@string/str_face"
+                android:src="@drawable/nine_64x64"
+                android:tag="19" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--5: Actions Buttons-->
+    <LinearLayout
+        android:id="@+id/layoutCmdButtons"
+        style="@style/innerLayoutHeight"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layoutCmdBtnVertCentered"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/buttomHome"
+                style="@style/cmdButtonStyle"
+                android:tag="40"
+                android:text="@string/str_home" />
+
+            <Button
+                android:id="@+id/buttonVisitor"
+                style="@style/cmdButtonStyle"
+                android:tag="50"
+                android:text="@string/str_visitor" />
+
+            <Button
+                android:id="@+id/buttonClear"
+                style="@style/cmdButtonStyle"
+                android:tag="30"
+                android:text="@string/str_clear" />
+
+            <Button
+                android:id="@+id/buttonReset"
+                style="@style/cmdButtonStyle"
+                android:tag="60"
+                android:text="@string/str_reset" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

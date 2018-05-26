@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DomiNote</string>
+    <string name="str_win">Win</string>
+    <string name="str_score">Score</string>
+    <string name="str_team">Team</string>
+    <string name="str_home">Home</string>
+    <string name="str_visitor">Visitor</string>
+    <string name="str_reset">Reset</string>
+    <string name="str_clear">Clear</string>
+    <string name="str_imagen">Domino Image</string>
+    <string name="str_zero">0</string>
+    <string name="str_face">Domino Face</string>
+</resources>
